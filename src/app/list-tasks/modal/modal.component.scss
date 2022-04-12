@@ -1,0 +1,55 @@
+@import "src/styles/variables";
+
+.modal-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > div {
+    width: 707px;
+    height: 280px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.btn-container {
+  display: flex;
+  margin-top: 83px;
+
+  .btn {
+    width: 220px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 2px solid $main-color;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .btn-close {
+    color: $main-color;
+  }
+
+  .btn-confirm {
+    margin-left: 77px;
+    color: #FFFFFF;
+    background: $main-color;
+  }
+
+}

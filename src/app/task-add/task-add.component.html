@@ -1,0 +1,12 @@
+<div class="header wrapper">
+  <div class="search">
+    <label>Фильтр:</label>
+    <input class="search-input" type="text" placeholder="Поиск по задаче" [(ngModel)]="searchText"
+           (ngModelChange)="onTyping(searchText)">
+  </div>
+  <div class="task-add">
+    <input class="add-task-input" type="text" placeholder="Введите название задачи" [(ngModel)]="taskName">
+    <button class="add-task-btn" (click)="addTask()">Добавить задачу</button>
+  </div>
+
+</div>

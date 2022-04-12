@@ -1,0 +1,35 @@
+/* Подключаем шрифты */
+@import "fonts";
+@import "variables";
+
+body {
+  margin: 0;
+  font-family: 'Manrope';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+label {
+  display: block;
+}
+input {
+  width: 340px;
+  height: 48px;
+  background: $secondary-text-color;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: $text-color;
+
+  &::placeholder {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: $inactive-text-color;
+  }
+}

@@ -1,0 +1,29 @@
+<div class="task-table">
+    <table>
+        <thead>
+        <tr>
+            <th class="task-name">Задача</th>
+            <th class="task-check">Выполнено</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let task of tasks | appFilter: searchText; let i=index" #elementName id="{{i}}">
+            <td class="task-td-line"><input class="task-input task-input-default" class="class-{{i}}" type="text"
+                                            value={{task.task}} disabled="disabled"></td>
+            <td class="task-check-td">
+                <label>
+                    <input type="checkbox" class="task-checkbox" value={{task.isCompleted}} [checked]="task.isCompleted"
+                           disabled="disabled">
+                    <span></span>
+                </label>
+            </td>
+            <td class="task-td-action">
+                <span (click)="edit($event, i, task.id)" class="edit"></span>
+                <span (click)="delete($event, i, task.id)" class="delete delete-default"></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div #modal></div>
