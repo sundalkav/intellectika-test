@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Task} from '@interfaces/task.interface';
 import {HttpErrorResponse} from '@angular/common/http';
 import {HttpService} from './services/http.service';
+import {map} from 'rxjs/operators';
 
 
 @Component({
@@ -24,7 +25,19 @@ export class AppComponent implements OnInit {
   }
 
   getTasks() {
-    this.httpService.getTasks().subscribe(
+    this.httpService.getTasks().pipe(
+      map(a => {
+        return a.map(b => {
+          let task: Task = {
+            id: b.id,
+            task: b.task,
+            isCompleted: b.isCompleted,
+            isEditing: false
+          };
+          return task;
+        });
+      })
+    ).subscribe(
       (data: Task[]) => {
         this.tasks = data;
         this.maxId = this.httpService.findMax(data).id;

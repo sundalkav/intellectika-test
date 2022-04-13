@@ -8,4 +8,7 @@ export interface Task{
 
     /** Флаг выполнена/не выполнена задача */
     isCompleted: boolean;
+
+    /** Флаг для редактирования записи */
+    isEditing?: boolean;
 }

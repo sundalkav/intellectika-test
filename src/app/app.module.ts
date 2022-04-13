@@ -15,7 +15,7 @@ import {FilterPipe} from './pipes/filter.pipe';
     ListTasksComponent,
     TaskAddComponent,
     ModalComponent,
-    FilterPipe
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
