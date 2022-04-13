@@ -1,14 +1,24 @@
 {
   "tasks": [
     {
-      "task": "Почитать Habr",
-      "isCompleted": true,
-      "id": 4
+      "id": 1,
+      "task": "Выучить Angular",
+      "isCompleted": false
     },
     {
-      "id": 5,
-      "task": "werwer",
+      "id": 2,
+      "task": "Выучить Typescript",
+      "isCompleted": true
+    },
+    {
+      "id": 3,
+      "task": "Покормить кошку",
       "isCompleted": false
+    },
+    {
+      "id": 4,
+      "task": "Почитать Habr",
+      "isCompleted": true
     }
   ]
 }
